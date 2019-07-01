@@ -12,7 +12,9 @@ foreach ($db->query('SELECT * FROM hooker') as $item) {
             if(isset($item[$j]))
                 echo "<td>".$item[$j]."</td>";
             else {
-                echo "<td><a href='delete.php?id=". $item[0] . "'>удалить</a></td>";
+
+                echo "<td><a href='delete.php?id=".$item[0]. "'>удалить</a>".
+                "|<a href='editing.php?id=". $item[0] . "'>редактировать</a></td>";
                 break;
             }
         }
@@ -20,5 +22,4 @@ foreach ($db->query('SELECT * FROM hooker') as $item) {
 }
 echo '</table>';
 echo '<a href="index.html">home</a>';
-
 ?>
