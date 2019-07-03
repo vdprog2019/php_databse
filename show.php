@@ -11,7 +11,7 @@ foreach ($db->query('SELECT * FROM hooker') as $item) {
 
             if(isset($item[$j]))
                 echo "<td>".$item[$j]."</td>";
-            else {
+                else {
 
                 echo "<td><a href='delete.php?id=".$item[0]. "'>удалить</a>".
                 "|<a href='editing.php?id=". $item[0] . "'>редактировать</a></td>";
